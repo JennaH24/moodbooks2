@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: monserrat, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input, button {
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f60;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+form {
+    display: block;
+    position: relative;
+
+}
+from:after{
+    content: '';
+    display: block;
+    position: relative;
+    top :-5px;
+    bottom: -5px;
+    right: -5px;
+    z-index: 1;
+    background-image: linear-gradient((to bottom right, #dfc5ac, #a4713f));
 }
 
-.App-link {
-  color: #61dafb;
+form .form-inner{
+    position: relative;
+    display: block;
+    background-color: #FFF;
+    padding: 30px;
+    z-index: 2;
+
+}
+form .form-inner h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: AAA;
+    font-size: 28px;
+    font-style: bold;
+    font-weight: 500;
+    margin-bottom: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form .form-inner .form-group {
+    display: block;
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+.form-inner .form-group label{
+    display: block;
+    color: 666;
+    font-size: 12px;
+    margin-bottom: 5px;
+    transition: 0.4s;
+}
+.form-inner .form-group:focus-within label {
+    colour: #FE4880
+}
+
+form .form-inner .form-group input {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #f8F8F8;
+    border-radius: 8px;
+    transition: 0.4s
+}
+form .form-inner .form-group input:focus{
+    box-shadow: 0px 0px 3px black;
+
+}
+
+form .form-inner input[type="submit"], .welcome button{
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-image: linear-gradient(to right, #ffce00 50%, #ffce00 50%, #fe4880);
+    background-size: 200%;
+    background-position: 0%;
+    transition: 0.4s;
+    color: #FFF;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+form .form-inner input[type="submit"]:hover, .welcome button:hover {
+    background-position: 100% 0%;
+}
+
+.wolcome {
+    width: 100%;
+    max-width: 480px;
+    background-color: white;
+    padding: 15px 30px;
+}
+
+.welcome h2 {
+    color: #888;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.welcome h2 span {
+color: #FE4880;
+font-weight: 700;
+
+
 }
